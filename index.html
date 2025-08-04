@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>YLC – Free Online Learning Center</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <div class="header-content">
+    <img src="logo.jpeg" alt="YLC Logo" class="logo" />
+    <div class="header-text">
+      <h1>YLC – Free Online Learning Center</h1>
+      <p>Empowering youth through accessible education</p>
+    </div>
+  </div>
+
+  <nav class="navbar">
+    <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#">Home</a></li>
+      <li><a href="#videos">Videos</a></li>
+      <li><a href="#posters">Posters</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <select onchange="changeTheme(this.value)">
+    <option value="">Coral (Default)</option>
+    <option value="blue-theme">Blue Professional</option>
+    <option value="green-theme">Green Growth</option>
+    <option value="purple-theme">Purple Innovation</option>
+    <option value="dark-theme">Dark Elegant</option>
+    <option value="ocean-theme">Oceanic Calm</option>
+    <option value="earth-theme">Earth Tones</option>
+    <option value="sunset-theme">Sunset Bold</option>
+    <option value="cyberpunk-theme">Cyberpunk</option>
+    <option value="holo-theme">Holographic Ice</option>
+    <option value="steel-theme">Steel Matrix</option>
+    <option value="quantum-theme">Quantum Blue</option>
+    <option value="infra-theme">Infra Violet</option>
+
+  </select>
+
+
+
+</header>
+
+
+
+<div class="container">
+  <section id="videos">
+    <h2 class="section-title">📹 Video Lessons</h2>
+    <div class="videos">
+      <div class="video-box">
+        <iframe src="Introduction to Basic Programming_ Summing Integers and Checking Even or Odd Numbers.mp4" title="Lesson 1"></iframe>
+      </div>
+      <div class="video-box">
+        <iframe src="Introduction to Basic Programming_ Summing Integers and Checking Even or Odd Numbers.mp4" title="Lesson 2"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section id="posters" style="margin-top: 3rem;">
+    <h2 class="section-title">🖼️Lessons / Posters</h2>
+    <div class="images">
+      <div class="image-box">
+        <img src="#" alt="Poster 1" />
+      </div>
+      <div class="image-box">
+        <img src="#" alt="Poster 2" />
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="margin-top: 3rem;">
+    <p style="text-align: c/enter;">You can contact us at abdulloxshavkatjonov88@email.com</p>
+  </section>
+</div>
+
+<div class="footer">
+  &copy; 2025 YLC. All rights reserved. | Made with ❤️ for the our community
+</div>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("show");
+  }
+  function changeTheme(themeName) {
+    document.body.classList.remove(
+      "blue-theme", "green-theme", "purple-theme", "dark-theme",
+      "ocean-theme", "earth-theme", "sunset-theme",
+      "cyberpunk-theme", "holo-theme", "steel-theme",
+      "quantum-theme", "infra-theme"
+    );
+
+    if (themeName) {
+      document.body.classList.add(themeName);
+    }
+}
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
