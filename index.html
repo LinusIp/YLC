@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>YLC — Free Online Learning Center</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="YLC — Free Online Learning Center. Video lessons, classrooms, posters and resources." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <img src="images/logo-placeholder.png" alt="YLC logo" class="logo" />
+        <div>
+          <h1>YLC — Free Online Learning Center</h1>
+          <p class="tag">Empowering youth through accessible education</p>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="themeToggle" class="btn icon">🌗</button>
+        <button id="menuBtn" class="btn icon mobile-only">☰</button>
+      </div>
+    </div>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#home" data-link>Home</a>
+      <a href="#videos" data-link>Videos</a>
+      <a href="#classrooms" data-link>Classrooms</a>
+      <a href="#posters" data-link>Posters</a>
+      <a href="#contact" data-link>Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h2>Learn anything. Anytime. Anywhere.</h2>
+        <p>Create, watch, and share free lessons — organized by classrooms for easy learning.</p>
+        <div class="cta-row">
+          <a href="#videos" class="btn primary">Start Learning</a>
+          <a href="#classrooms" class="btn outline">View Classrooms</a>
+        </div>
+      </div>
+
+      <div class="hero-art">
+        <img src="images/hero-illustration-placeholder.png" alt="Learning illustration" />
+      </div>
+    </section>
+
+    <!-- SEARCH & FILTER -->
+    <section class="search-bar">
+      <input id="searchInput" type="search" placeholder="Search lessons, topics or authors..." />
+      <select id="categoryFilter" aria-label="Filter by category">
+        <option value="">All Classrooms</option>
+      </select>
+      <button id="clearFilters" class="btn small">Clear</button>
+    </section>
+
+    <!-- VIDEOS -->
+    <section id="videos" class="section">
+      <div class="section-header">
+        <h3>📹 Video Lessons</h3>
+        <p class="muted">Browse lessons — click a card to watch in a modern in-page player.</p>
+      </div>
+
+      <div id="lessonsGrid" class="grid"></div>
+    </section>
+
+    <!-- CLASSROOMS -->
+    <section id="classrooms" class="section">
+      <div class="section-header">
+        <h3>🏫 Classrooms</h3>
+        <p class="muted">Organized categories for focused study.</p>
+      </div>
+
+      <div id="classroomsGrid" class="cards-grid"></div>
+    </section>
+
+    <!-- POSTERS / RESOURCES -->
+    <section id="posters" class="section">
+      <div class="section-header">
+        <h3>🖼 Posters & Resources</h3>
+        <p class="muted">Downloadable posters, PDFs and study guides.</p>
+      </div>
+
+      <div id="postersGrid" class="grid"></div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <h3>Contact</h3>
+      <p>You can contact us at <a href="mailto:abdulloxshavkatjonov88@email.com">abdullox...@email.com</a></p>
+      <p class="muted">Hosted on GitHub Pages • No signup required • Open educational content</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>© <span id="year"></span> YLC. All rights reserved.</div>
+      <div class="muted">Made with ❤️ for our community</div>
+    </div>
+  </footer>
+
+  <!-- VIDEO MODAL -->
+  <div id="videoModal" class="modal" aria-hidden="true">
+    <div class="modal-panel" role="dialog" aria-modal="true">
+      <button class="modal-close btn icon" id="closeModal">✕</button>
+      <div class="video-frame" id="videoFrame">
+        <!-- injected by JS: either <video> or <iframe> -->
+      </div>
+      <div class="modal-meta">
+        <h4 id="modalTitle"></h4>
+        <p id="modalDesc" class="muted"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
